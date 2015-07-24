@@ -1,0 +1,12 @@
+include('tohdw_haio_semantic_map.fof.tptp').
+
+% HAI.owl ontology translated into tptp formulas without illegal tptp formula symbols 
+include('HAI_no_Illegal_Symbols.ontology.cnf.tptp').
+
+% semantic query
+input_clause(query4patOacisPID,conjecture,
+  [
+   --p_Patient(X),
+   --p_has_patient_identification_number(X,N),
+    ++answer(N)
+  ]).

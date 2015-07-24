@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<predicateViews>
+     
+
+  <view predicateName="db_Npatient" arity="37">
+    <table name="Npatient">
+      <exportedAttribute>patWID</exportedAttribute>
+      <exportedAttribute>patWCT</exportedAttribute>
+      <exportedAttribute>patWUT</exportedAttribute>
+      <exportedAttribute>patWUU</exportedAttribute>
+      <exportedAttribute>patMrn</exportedAttribute>
+      <exportedAttribute>patOacisPID</exportedAttribute>
+      <exportedAttribute>patFacWID</exportedAttribute>
+      <exportedAttribute>patMrnSts</exportedAttribute>
+      <exportedAttribute>patMergeToMrn</exportedAttribute>
+      <exportedAttribute>patMergeToWID</exportedAttribute>
+      <exportedAttribute>patLastName</exportedAttribute>
+      <exportedAttribute>patFirstName</exportedAttribute>
+      <exportedAttribute>patBirthDtm</exportedAttribute>
+      <exportedAttribute>patMaritalSts</exportedAttribute>
+      <exportedAttribute>patGenderCd</exportedAttribute>
+      <exportedAttribute>patLanguageCd</exportedAttribute>
+      <exportedAttribute>patReligionCd</exportedAttribute>
+      <exportedAttribute>patHomePhoneNum</exportedAttribute>
+      <exportedAttribute>patAddressStreet</exportedAttribute>
+      <exportedAttribute>patAddressAptNum</exportedAttribute>
+      <exportedAttribute>patAddressCity</exportedAttribute>
+      <exportedAttribute>patAddressProv</exportedAttribute>
+      <exportedAttribute>patAddressCountry</exportedAttribute>
+      <exportedAttribute>patAddressPostalCd</exportedAttribute>
+      <exportedAttribute>patRfpCd</exportedAttribute>
+      <exportedAttribute>patHealthNum</exportedAttribute>
+      <exportedAttribute>patDeathInd</exportedAttribute>
+      <exportedAttribute>patVipInd</exportedAttribute>
+      <exportedAttribute>patFamilyProName</exportedAttribute>
+      <exportedAttribute>patOccupation</exportedAttribute>
+      <exportedAttribute>patAllergyInd</exportedAttribute>
+      <exportedAttribute>patFatherFirstName</exportedAttribute>
+      <exportedAttribute>patWorkPhoneNum</exportedAttribute>
+      <exportedAttribute>patFamilyProWID</exportedAttribute>
+      <exportedAttribute>patDeathDtm</exportedAttribute>
+      <exportedAttribute>patIsolAlert</exportedAttribute>
+      <exportedAttribute>patLastChangeDtm</exportedAttribute>
+    </table>
+  </view>
+  <view predicateName="db_Nencounter" arity="50">
+    <table name="Nencounter">
+      <exportedAttribute>encWID</exportedAttribute>
+      <exportedAttribute>encWCT</exportedAttribute>
+      <exportedAttribute>encWUT</exportedAttribute>
+      <exportedAttribute>encWUU</exportedAttribute>
+      <exportedAttribute>encPatWID</exportedAttribute>
+      <exportedAttribute>encSourceAppCd</exportedAttribute>
+      <exportedAttribute>encCampusCd</exportedAttribute>
+      <exportedAttribute>encOacisCampusCd</exportedAttribute>
+      <exportedAttribute>encOacisSID</exportedAttribute>
+      <exportedAttribute>encMrn</exportedAttribute>
+      <exportedAttribute>encNum</exportedAttribute>
+      <exportedAttribute>encSMSCaseNum</exportedAttribute>
+      <exportedAttribute>encTypeCd</exportedAttribute>
+      <exportedAttribute>encOacisTypeCd</exportedAttribute>
+      <exportedAttribute>encVisitTypeCd</exportedAttribute>
+      <exportedAttribute>encOacisVisitTypeCd</exportedAttribute>
+      <exportedAttribute>encSeriesInd</exportedAttribute>
+      <exportedAttribute>encStsCd</exportedAttribute>
+      <exportedAttribute>encOacisStsCd</exportedAttribute>
+      <exportedAttribute>encStartDtm</exportedAttribute>
+      <exportedAttribute>encOacisStartDtm</exportedAttribute>
+      <exportedAttribute>encEndDtm</exportedAttribute>
+      <exportedAttribute>encOacisEndDtm</exportedAttribute>
+      <exportedAttribute>encPatLastName</exportedAttribute>
+      <exportedAttribute>encPatFirstName</exportedAttribute>
+      <exportedAttribute>encBirthDtm</exportedAttribute>
+      <exportedAttribute>encPatAddressStreetNum</exportedAttribute>
+      <exportedAttribute>encPatAddressStreet</exportedAttribute>
+      <exportedAttribute>encPatAddressApartment</exportedAttribute>
+      <exportedAttribute>encPatAddressCity</exportedAttribute>
+      <exportedAttribute>encPatAddressProv</exportedAttribute>
+      <exportedAttribute>encPatAddressCountry</exportedAttribute>
+      <exportedAttribute>encPatAddressPostalCd</exportedAttribute>
+      <exportedAttribute>encPatAgeAtAdm</exportedAttribute>
+      <exportedAttribute>encPatGenderCd</exportedAttribute>
+      <exportedAttribute>encMaritalSts</exportedAttribute>
+      <exportedAttribute>encPatLanguageCd</exportedAttribute>
+      <exportedAttribute>encAttendingProWID</exportedAttribute>
+      <exportedAttribute>encPatReligionCd</exportedAttribute>
+      <exportedAttribute>encConditionCd</exportedAttribute>
+      <exportedAttribute>encAdmPriority</exportedAttribute>
+      <exportedAttribute>encRfpCd</exportedAttribute>
+      <exportedAttribute>encAdmType</exportedAttribute>
+      <exportedAttribute>encHospSvcCd</exportedAttribute>
+      <exportedAttribute>encOacisHospSvcCd</exportedAttribute>
+      <exportedAttribute>encNursSta</exportedAttribute>
+      <exportedAttribute>encBed</exportedAttribute>
+      <exportedAttribute>encAdmProWID</exportedAttribute>
+      <exportedAttribute>encAccommodationGiven</exportedAttribute>
+      <exportedAttribute>encDeathInd</exportedAttribute>
+    </table>
+  </view>
+  
+</predicateViews>

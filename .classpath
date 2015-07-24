@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/SQLTemplateQueryManager/src/main/java"/>
+	<classpathentry kind="src" path="/SQLTemplateQueryManager/src/main/resources"/>
+	<classpathentry kind="src" path="/SQLTemplateQueryManager/src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Maven: junit:junit:3.8.1"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Maven: org.apache.commons:commons-exec:1.3"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Maven: commons-io:commons-io:2.4"/>
+	<classpathentry exported="true" kind="var" path="USER_HOME/Dropbox/Experiments/HAIDW2HAIO/HAIKUDemo/QueryManager/lib/CushionJE.jar"/>
+	<classpathentry exported="true" kind="var" path="USER_HOME/Dropbox/Experiments/HAIDW2HAIO/HAIKUDemo/QueryManager/lib/derby.jar"/>
+	<classpathentry exported="true" kind="var" path="USER_HOME/Dropbox/Experiments/HAIDW2HAIO/HAIKUDemo/QueryManager/lib/JSAP-2.0a.jar"/>
+	<classpathentry exported="true" kind="var" path="USER_HOME/Dropbox/Experiments/HAIDW2HAIO/HAIKUDemo/QueryManager/lib/LogicWarehouseJE.jar"/>
+	<classpathentry exported="true" kind="var" path="USER_HOME/Dropbox/Experiments/HAIDW2HAIO/HAIKUDemo/QueryManager/lib/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

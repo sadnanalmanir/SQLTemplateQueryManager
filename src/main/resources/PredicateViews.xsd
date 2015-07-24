@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+ <xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns=""
+  targetNamespace="">
+
+
+  <xs:annotation>
+    <xs:documentation>
+      TO BE WRITTEN. SOON :-)
+    </xs:documentation>
+  </xs:annotation>
+  
+
+  <xs:element name="predicateViews">
+    <xs:complexType>
+      <xs:sequence>
+
+	<xs:group ref="TopLevelDeclaration" minOccurs="0" maxOccurs="unbounded"/>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+
+  <xs:group name="TopLevelDeclaration">
+    <xs:choice>
+
+	<xs:element name="view" minOccurs="0" maxOccurs="unbounded">
+	  <xs:complexType>
+
+	    <xs:sequence>
+
+	      <xs:group ref="UnionMember" minOccurs="1" maxOccurs="unbounded"/>
+	      
+	    </xs:sequence>
+
+	    <xs:attribute name="predicateName" type="xs:string" use="required"/>
+	    <xs:attribute name="arity" type="xs:integer" use="required"/>
+
+	  </xs:complexType>
+	</xs:element>
+
+
+
+	<xs:element name="test" minOccurs="0" maxOccurs="unbounded">
+	  <xs:complexType>
+	    
+	    <xs:sequence>
+	      <xs:group ref="TemplateElement" minOccurs="0" maxOccurs="unbounded"/>
+	    </xs:sequence>
+	    
+
+	    <xs:attribute name="predicateName" type="xs:string" use="required"/>
+	    <xs:attribute name="arity" type="xs:integer" use="required"/>
+
+	  </xs:complexType>
+	</xs:element>
+	    
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="TemplateElement">
+    <xs:choice>
+      <xs:element name="text" type="xs:string"/>
+      <xs:element name="parameter" type="xs:string"/>		  
+    </xs:choice>
+  </xs:group>
+  
+
+  <xs:group name="UnionMember">
+    <xs:choice>
+
+      <xs:element name="query">
+	  <xs:complexType>
+	    <xs:sequence>
+	      <xs:element name="body" type="xs:string"/>
+	      <xs:element name="exportedAttribute" 
+			  type="xs:string" 
+			  minOccurs="1" 
+			  maxOccurs="unbounded"/>
+	    </xs:sequence>
+	  </xs:complexType>
+      </xs:element>
+
+      <xs:element name="table">	
+	  <xs:complexType>
+	    <xs:sequence>
+	      <xs:element name="exportedAttribute" 
+			  type="xs:string" 
+			  minOccurs="1" 
+			  maxOccurs="unbounded"/>
+	    </xs:sequence>
+	    <xs:attribute name="name" type="xs:string" use="required"/>
+	  </xs:complexType>  
+      </xs:element>
+
+    </xs:choice>
+  </xs:group>
+  
+ </xs:schema>

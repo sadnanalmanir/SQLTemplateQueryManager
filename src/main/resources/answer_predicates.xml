@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<Parameters>
+
+  <!-- These predicate are reserved as answer predicates. -->
+  
+  <AnswerPredicates>
+    <predicate name="answer" arity="1"/> 
+    <predicate name="answer" arity="2"/> 
+    <predicate name="answer" arity="3"/> 
+    <predicate name="answer" arity="4"/> 
+    <predicate name="answer" arity="5"/> 
+    <predicate name="answer" arity="6"/> 
+    <predicate name="answer" arity="7"/> 
+    <predicate name="answer" arity="8"/> 
+    <predicate name="answer" arity="9"/> 
+    <predicate name="answer" arity="10"/> 
+    <predicate name="answer" arity="11"/> 
+    <predicate name="answer" arity="12"/> 
+    <predicate name="answer" arity="13"/> 
+    <predicate name="answer" arity="14"/> 
+    <predicate name="answer" arity="15"/> 
+    <predicate name="answer" arity="16"/> 
+    <predicate name="answer" arity="17"/> 
+    <predicate name="answer" arity="18"/> 
+    <predicate name="answer" arity="19"/> 
+    <predicate name="answer" arity="20"/> 
+    <predicate name="answer" arity="21"/> 
+    <predicate name="answer" arity="22"/> 
+    <predicate name="answer" arity="23"/> 
+    <predicate name="answer" arity="24"/> 
+    <predicate name="answer" arity="25"/> 
+    <predicate name="answer" arity="26"/> 
+    <predicate name="answer" arity="27"/> 
+    <predicate name="answer" arity="28"/> 
+    <predicate name="answer" arity="29"/> 
+    <predicate name="answer" arity="30"/> 
+    <predicate name="answer" arity="31"/> 
+    <predicate name="answer" arity="32"/> 
+    <predicate name="answer" arity="33"/> 
+    <predicate name="answer" arity="34"/> 
+    <predicate name="answer" arity="35"/> 
+    <predicate name="answer" arity="36"/> 
+    <predicate name="answer" arity="37"/> 
+    <predicate name="answer" arity="38"/> 
+    <predicate name="answer" arity="39"/> 
+    <predicate name="answer" arity="40"/> 
+    <predicate name="answer" arity="41"/> 
+    <predicate name="answer" arity="42"/> 
+    <predicate name="answer" arity="43"/> 
+    <predicate name="answer" arity="44"/> 
+    <predicate name="answer" arity="45"/> 
+    <predicate name="answer" arity="46"/> 
+    <predicate name="answer" arity="47"/> 
+    <predicate name="answer" arity="48"/> 
+    <predicate name="answer" arity="49"/> 
+    <predicate name="answer" arity="50"/> 
+    <predicate name="answer" arity="51"/> 
+    <predicate name="answer" arity="52"/> 
+    <predicate name="answer" arity="53"/> 
+    <predicate name="answer" arity="54"/> 
+    <predicate name="answer" arity="55"/> 
+    <predicate name="answer" arity="56"/> 
+    <predicate name="answer" arity="57"/> 
+    <predicate name="answer" arity="58"/> 
+    <predicate name="answer" arity="59"/> 
+    <predicate name="answer" arity="60"/> 
+    <predicate name="answer" arity="61"/> 
+    <predicate name="answer" arity="62"/> 
+    <predicate name="answer" arity="63"/> 
+    <predicate name="answer" arity="64"/> 
+    <predicate name="answer" arity="65"/> 
+    <predicate name="answer" arity="66"/> 
+    <predicate name="answer" arity="67"/> 
+    <predicate name="answer" arity="68"/> 
+    <predicate name="answer" arity="69"/> 
+    <predicate name="answer" arity="70"/> 
+    <predicate name="answer" arity="71"/> 
+    <predicate name="answer" arity="72"/> 
+    <predicate name="answer" arity="73"/> 
+    <predicate name="answer" arity="74"/> 
+    <predicate name="answer" arity="75"/> 
+    <predicate name="answer" arity="76"/> 
+    <predicate name="answer" arity="77"/> 
+    <predicate name="answer" arity="78"/> 
+    <predicate name="answer" arity="79"/> 
+    <predicate name="answer" arity="80"/> 
+    <predicate name="answer" arity="81"/> 
+    <predicate name="answer" arity="82"/> 
+    <predicate name="answer" arity="83"/> 
+    <predicate name="answer" arity="84"/> 
+    <predicate name="answer" arity="85"/> 
+    <predicate name="answer" arity="86"/> 
+    <predicate name="answer" arity="87"/> 
+    <predicate name="answer" arity="88"/> 
+    <predicate name="answer" arity="89"/> 
+    <predicate name="answer" arity="90"/> 
+  </AnswerPredicates>
+
+  
+
+</Parameters>

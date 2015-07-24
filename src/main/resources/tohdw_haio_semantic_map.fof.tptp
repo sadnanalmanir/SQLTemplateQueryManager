@@ -1,0 +1,191 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TABLE: Npatient
+%% TABLE PREDICATE: db_Npatient
+%% PRIMARY-KEY-TO-ENTITY FUNCTION: patientEntity
+%% INVERSE FOR PRIMARY-KEY-TO-ENTITY FUNCTION: patientEntityToPatWID
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Setting up primary key PatWID
+% patientEntityToPatWID is an inverse function for patientEntity.
+
+fof(inverse_for_patientEntity_1,axiom,
+   ! [PatWID] : (patientEntityToPatWID(patientEntity(PatWID)) = PatWID)
+).
+
+fof(inverse_for_patientEntity_2,axiom,
+   ! [P] : (patientEntity(patientEntityToPatWID(P)) = P)
+).
+
+
+% Mapping the attribute Npatient.patWID to entities of the concept HAI:Patient.
+
+fof(table_Npatient_represents_instances_of_concept_Patient,axiom,
+  ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=> 
+  p_Patient(patientEntity(PatWID)))
+).
+
+% Mapping the attribute Npatient.patOacisPID to the property HAI:has_patient_identification_number
+
+fof(attribute_Npatient_PatOacisPID_assigned_to_has_patient_identification_number,axiom,
+  ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=> 
+  p_has_patient_identification_number(patientEntity(PatWID),PatOacisPID))
+).
+
+% Mapping the attribute Npatient.patOacisPID to the property HAI:has_patient_identification_number
+
+fof(attribute_Npatient_PatOacisPID_assigned_to_has_patient_identification_number,axiom,
+  ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=> 
+  p_has_patient_identification_number(patientEntity(PatWID),PatOacisPID))
+).
+
+% Mapping the attribute Npatient.patFirstName to the property HAI:has_first_name
+
+fof(attribute_Npatient_patFirstName_assigned_to_has_first_name, axiom,
+  ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>   
+  p_has_first_name(patientEntity(PatWID), PatFirstName))
+).
+
+% Mapping the attribute Npatient.patLastName to the property HAI:has_last_name.
+
+fof(attribute_Npatient_patLastName_assigned_to_has_last_name,axiom,
+  ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=> 
+  p_has_last_name(patientEntity(PatWID),PatLastName))
+).
+
+% Mapping the attribute Npatient.patBirthDtm to the property HAI:has_birth_date
+
+fof(attribute_Npatient_patBirthDtm_assigned_to_has_birth_date, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>   
+  p_has_birth_date(patientEntity(PatWID), PatBirthDtm))
+).
+
+
+% Mapping the attribute Npatient.patHomePhoneNum to the property HAI:has_person_home_phone_number
+
+fof(attribute_Npatient_patHomePhoneNum_assigned_to_has_person_home_phone_number, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_person_home_phone_number(patientEntity(PatWID), PatHomePhoneNum))
+).
+
+% Mapping the attribute Npatient.patAddressStreet to the property HAI:has_person_address_street
+
+fof(attribute_Npatient_patAddressStreet_assigned_to_has_person_address_street, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_person_address_street_name(patientEntity(PatWID), PatAddressStreet))
+).
+
+% Mapping the attribute Npatient.patAddressAptNum to the property HAI:has_person_address_appartment_number
+
+fof(attribute_Npatient_patAddressAptNum_assigned_to_has_person_address_appartment_number, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_person_address_appartment_number(patientEntity(PatWID), PatAddressAptNum))
+).
+
+% Mapping the attribute Npatient.patAddressPostalCd to the property HAI:has_person_address_postal_code
+
+fof(attribute_Npatient_patAddressPostalCd_assigned_to_has_person_address_postal_code, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_person_address_postal_code(patientEntity(PatWID), PatAddressPostalCd))
+).
+
+% Mapping the attribute Npatient.patHealthNum to the property HAI:has_health_care_identification_number
+
+fof(attribute_Npatient_patHealthNum_assigned_to_has_health_care_identification_number, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_health_care_identification_number(patientEntity(PatWID), PatHealthNum))
+).
+
+% Mapping the attribute Npatient.patFatherFirstName to the property HAI:has_father_first_name
+
+fof(attribute_Npatient_patFatherFirstName_assigned_to_has_health_care_identification_number, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_father_first_name(patientEntity(PatWID), PatFatherFirstName))
+).
+
+% Mapping the attribute Npatient.patWorkPhoneNum to the property HAI:has_person_work_phone_number
+
+fof(attribute_Npatient_patWorkPhoneNum_assigned_to_has_person_work_phone_number, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_person_work_phone_number(patientEntity(PatWID), PatWorkPhoneNum))
+).
+
+% Mapping the attribute Npatient.patDeathDtm to the property HAI:has_date_of_death
+
+fof(attribute_Npatient_patDeathDtm_assigned_to_has_date_of_death, axiom,
+ ! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_date_of_death(patientEntity(PatWID), PatDeathDtm))
+).
+
+% Mapping the attribute Npatient.patLastChangeDtm to the property HAI:has_update_date
+
+fof(attribute_Npatient_patLastChangeDtm_assigned_to_has_update_date, axiom,
+! [PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm] :
+  (db_Npatient(PatWID, PatWCT, PatWUT, PatWUU, PatMrn, PatOacisPID, PatFacWID, PatMrnSts, PatMergeToMrn, PatMergeToWID, PatLastName,PatFirstName, PatBirthDtm, PatMaritalSts, PatGenderCd, PatLanguageCd, PatReligionCd, PatHomePhoneNum, PatAddressStreet, PatAddressAptNum, PatAddressCity, PatAddressProv, PatAddressCountry, PatAddressPostalCd, PatRfpCd, PatHealthNum, PatDeathInd, PatVipInd, PatFamilyProName, PatOccupation, PatAllergyInd, PatFatherFirstName, PatWorkPhoneNum, PatFamilyProWID, PatDeathDtm, PatIsolAlert, PatLastChangeDtm) 
+=>  
+  p_has_update_date(patientEntity(PatWID), PatLastChangeDtm))
+).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TABLE: Nencounter
+%% TABLE PREDICATE: db_Nencounter
+%% PRIMARY-KEY-TO-ENTITY FUNCTION: encounterEntity
+%% INVERSE FOR PRIMARY-KEY-TO-ENTITY FUNCTION: encounterEntityToEncWID
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Setting up primary key PatWID
+% patientEntityToPatWID is an inverse function for patientEntity.
+
+fof(inverse_for_encounterEntity_1,axiom,
+   ! [EncWID] : (encounterEntityToEncWID(encounterEntity(EncWID)) = EncWID)
+).
+
+fof(inverse_for_encounterEntity_2,axiom,
+   ! [P] : (encounterEntity(encounterEntityToEncWID(P)) = P)
+).
+
+% Mapping the attribute Nencounter.encEndDtm to the property HAI:has_discharge_date
+% ERROR: if the 90th predicate 'EncAnaesthesiaRequired' is added, error signal 'SIGSEGV' is thrown and kernel quits
+
+% This formula contains 89 quantified variables
+
+  fof(table_Nencounter_encEndDtm_assigned_to_has_discharge_date,axiom,
+  ! [EncWID, EncWCT, EncWUT, EncWUU, EncPatWID, EncSourceAppCd, EncCampusCd,  EncOacisCampusCd, EncOacisSID, EncMrn, EncNum, EncSMSCaseNum, EncTypeCd,EncOacisTypeCd, EncVisitTypeCd, EncOacisVisitTypeCd, EncSeriesInd, EncStsCd, EncOacisStsCd, EncStartDtm, EncOacisStartDtm, EncEndDtm, EncOacisEndDtm, EncPatLastName, EncPatFirstName, EncBirthDtm, EncPatAddressStreetNum, EncPatAddressStreet, EncPatAddressApartment, EncPatAddressCity, EncPatAddressProv, EncPatAddressCountry, EncPatAddressPostalCd, EncPatAgeAtAdm, EncPatGenderCd, EncMaritalSts, EncPatLanguageCd, EncAttendingProWID, EncPatReligionCd, EncConditionCd, EncAdmPriority, EncRfpCd, EncAdmType, EncHospSvcCd, EncOacisHospSvcCd, EncNursSta, EncBed, EncAdmProWID, EncAccommodationGiven, EncDeathInd, EncDschDispDetail, EncAppointmentDtm, EncClinicCd, EncOacisClinicCd, EncOffActiveCareOccurInd, EncOffActiveCareStartDtm1, EncOffActiveCareReturnDtm1, EncOffActiveCareStartDtm2, EncOffActiveCareReturnDtm2, EncOffActiveCareStartDtm3, EncOffActiveCareReturnDtm3, EncOffActiveCareStartDtm4, EncOffActiveCareReturnDtm4,  EncOccupationCd, EncOccupationDesc, EncPatWeight, EncAdmRoute, EncDiagnosisCd, EncExpectedLos, EncPatDomicile, EncAccidentDtm, EncAppointmentType, EncAppointmentSts, EncFamilyProName, EncHealthNum, EncHealthNumExpiry, EncOtherProvInsuranceProv, EncOtherProvInsuranceReason, EncReferralDtm, EncSrcOfReferrralRequest, EncReferralSrc,  EncReferringInstitution, EncTransferFromInstitutionCd, EncTransferFromInstitutionName, EncTransferFromInstitutionType,  EncTransferFromProv, EncVisitDesc, EncAccompaniedByCd, EncAmbulanceInd] :
+  (db_Nencounter(EncWID, EncWCT, EncWUT, EncWUU, EncPatWID, EncSourceAppCd, EncCampusCd,  EncOacisCampusCd, EncOacisSID, EncMrn, EncNum, EncSMSCaseNum, EncTypeCd,EncOacisTypeCd, EncVisitTypeCd, EncOacisVisitTypeCd, EncSeriesInd, EncStsCd, EncOacisStsCd, EncStartDtm, EncOacisStartDtm, EncEndDtm, EncOacisEndDtm, EncPatLastName, EncPatFirstName, EncBirthDtm, EncPatAddressStreetNum, EncPatAddressStreet, EncPatAddressApartment, EncPatAddressCity, EncPatAddressProv, EncPatAddressCountry, EncPatAddressPostalCd, EncPatAgeAtAdm, EncPatGenderCd, EncMaritalSts, EncPatLanguageCd, EncAttendingProWID, EncPatReligionCd, EncConditionCd, EncAdmPriority, EncRfpCd, EncAdmType, EncHospSvcCd, EncOacisHospSvcCd, EncNursSta, EncBed, EncAdmProWID, EncAccommodationGiven, EncDeathInd, EncDschDispDetail, EncAppointmentDtm, EncClinicCd, EncOacisClinicCd, EncOffActiveCareOccurInd, EncOffActiveCareStartDtm1, EncOffActiveCareReturnDtm1, EncOffActiveCareStartDtm2, EncOffActiveCareReturnDtm2, EncOffActiveCareStartDtm3, EncOffActiveCareReturnDtm3, EncOffActiveCareStartDtm4, EncOffActiveCareReturnDtm4,  EncOccupationCd, EncOccupationDesc, EncPatWeight, EncAdmRoute, EncDiagnosisCd, EncExpectedLos, EncPatDomicile, EncAccidentDtm, EncAppointmentType, EncAppointmentSts, EncFamilyProName, EncHealthNum, EncHealthNumExpiry, EncOtherProvInsuranceProv, EncOtherProvInsuranceReason, EncReferralDtm, EncSrcOfReferrralRequest, EncReferralSrc,  EncReferringInstitution, EncTransferFromInstitutionCd, EncTransferFromInstitutionName, EncTransferFromInstitutionType,  EncTransferFromProv, EncVisitDesc, EncAccompaniedByCd, EncAmbulanceInd) => p_has_discharge_date(encounterEntity(EncWID), EncEndDtm))).
+
+
+% this formula contains 90 quantified variables
+
+%  fof(table_Nencounter_encEndDtm_assigned_to_has_discharge_date,axiom,
+%  ! [EncWID, EncWCT, EncWUT, EncWUU, EncPatWID, EncSourceAppCd, EncCampusCd,  EncOacisCampusCd, EncOacisSID, EncMrn, EncNum, EncSMSCaseNum, EncTypeCd,EncOacisTypeCd, EncVisitTypeCd, EncOacisVisitTypeCd, EncSeriesInd, EncStsCd, EncOacisStsCd, EncStartDtm, EncOacisStartDtm, EncEndDtm, EncOacisEndDtm, EncPatLastName, EncPatFirstName, EncBirthDtm, EncPatAddressStreetNum, EncPatAddressStreet, EncPatAddressApartment, EncPatAddressCity, EncPatAddressProv, EncPatAddressCountry, EncPatAddressPostalCd, EncPatAgeAtAdm, EncPatGenderCd, EncMaritalSts, EncPatLanguageCd, EncAttendingProWID, EncPatReligionCd, EncConditionCd, EncAdmPriority, EncRfpCd, EncAdmType, EncHospSvcCd, EncOacisHospSvcCd, EncNursSta, EncBed, EncAdmProWID, EncAccommodationGiven, EncDeathInd, EncDschDispDetail, EncAppointmentDtm, EncClinicCd, EncOacisClinicCd, EncOffActiveCareOccurInd, EncOffActiveCareStartDtm1, EncOffActiveCareReturnDtm1, EncOffActiveCareStartDtm2, EncOffActiveCareReturnDtm2, EncOffActiveCareStartDtm3, EncOffActiveCareReturnDtm3, EncOffActiveCareStartDtm4, EncOffActiveCareReturnDtm4,  EncOccupationCd, EncOccupationDesc, EncPatWeight, EncAdmRoute, EncDiagnosisCd, EncExpectedLos, EncPatDomicile, EncAccidentDtm, EncAppointmentType, EncAppointmentSts, EncFamilyProName, EncHealthNum, EncHealthNumExpiry, EncOtherProvInsuranceProv, EncOtherProvInsuranceReason, EncReferralDtm, EncSrcOfReferrralRequest, EncReferralSrc,  EncReferringInstitution, EncTransferFromInstitutionCd, EncTransferFromInstitutionName, EncTransferFromInstitutionType,  EncTransferFromProv, EncVisitDesc, EncAccompaniedByCd, EncAmbulanceInd, EncAnaesthesiaRequired] : 
+%  (db_Nencounter(EncWID, EncWCT, EncWUT, EncWUU, EncPatWID, EncSourceAppCd, EncCampusCd,  EncOacisCampusCd, EncOacisSID, EncMrn, EncNum, EncSMSCaseNum, EncTypeCd,EncOacisTypeCd, EncVisitTypeCd, EncOacisVisitTypeCd, EncSeriesInd, EncStsCd, EncOacisStsCd, EncStartDtm, EncOacisStartDtm, EncEndDtm, EncOacisEndDtm, EncPatLastName, EncPatFirstName, EncBirthDtm, EncPatAddressStreetNum, EncPatAddressStreet, EncPatAddressApartment, EncPatAddressCity, EncPatAddressProv, EncPatAddressCountry, EncPatAddressPostalCd, EncPatAgeAtAdm, EncPatGenderCd, EncMaritalSts, EncPatLanguageCd, EncAttendingProWID, EncPatReligionCd, EncConditionCd, EncAdmPriority, EncRfpCd, EncAdmType, EncHospSvcCd, EncOacisHospSvcCd, EncNursSta, EncBed, EncAdmProWID, EncAccommodationGiven, EncDeathInd, EncDschDispDetail, EncAppointmentDtm, EncClinicCd, EncOacisClinicCd, EncOffActiveCareOccurInd, EncOffActiveCareStartDtm1, EncOffActiveCareReturnDtm1, EncOffActiveCareStartDtm2, EncOffActiveCareReturnDtm2, EncOffActiveCareStartDtm3, EncOffActiveCareReturnDtm3, EncOffActiveCareStartDtm4, EncOffActiveCareReturnDtm4,  EncOccupationCd, EncOccupationDesc, EncPatWeight, EncAdmRoute, EncDiagnosisCd, EncExpectedLos, EncPatDomicile, EncAccidentDtm, EncAppointmentType, EncAppointmentSts, EncFamilyProName, EncHealthNum, EncHealthNumExpiry, EncOtherProvInsuranceProv, EncOtherProvInsuranceReason, EncReferralDtm, EncSrcOfReferrralRequest, EncReferralSrc,  EncReferringInstitution, EncTransferFromInstitutionCd, EncTransferFromInstitutionName, EncTransferFromInstitutionType,  EncTransferFromProv, EncVisitDesc, EncAccompaniedByCd, EncAmbulanceInd, EncAnaesthesiaRequired) => p_has_discharge_date(encounterEntity(EncWID), EncEndDtm))).
+

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<Parameters>
+
+  <!-- Parameters for VampirePrime (vkernel shell). -->
+  
+  <ExtensionalPredicates>
+    <predicate name="db_Npatient" arity="37"/>
+    <predicate name="db_Nencounter" arity="90"/>
+  </ExtensionalPredicates>
+
+</Parameters>
